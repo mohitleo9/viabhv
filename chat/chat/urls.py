@@ -7,5 +7,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^(home)?/?$', 'chat.views.home.home_handler', name='home'),
+    url(r'^home/?$', 'chat.views.home.home_handler', name='home'),
+    url(r'^login/?$', 'chat.views.home.login_handler', name='login'),
+    url(r'^logout/?$', 'chat.views.home.logout_handler', name='logout'),
 )
