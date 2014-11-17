@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^login/?$', 'chat.views.home.login_handler', name='login'),
     url(r'^logout/?$', 'chat.views.home.logout_handler', name='logout'),
     url(r'^api/message/?$', 'chitchat.api.message_get_handler'),
+    url(r'^api/message/POST/?$', 'chitchat.api.message_put_handler'),
 )
