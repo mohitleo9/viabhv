@@ -9,7 +9,8 @@ def message_get_handler(request):
     """
     # let the user see his data
     # only show text and date
-    data = Message.objects.filter(user=request.user).values('text', 'date')
+    # data = Message.objects.filter(user=request.user).values('text', 'date')
+    data = Message.objects.values('text', 'date')
 
     # now we need to convert date to readable format
     for d in data:

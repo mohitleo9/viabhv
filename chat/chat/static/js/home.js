@@ -30,3 +30,14 @@ $('#post').click( function(event) {
 
     }
 });
+
+// load the messages
+$.get('/api/message', function (data) {
+   console.log(data);
+   var messages = data['response_json'];
+   $.each(messages, function(index, value) {
+
+      $('#list').append('<li class="list-group-item list-group-item-info">'+ value.text + '</li>');
+
+   });
+});
